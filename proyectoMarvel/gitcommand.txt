@@ -17,3 +17,7 @@ git remote add origin + "url" (conecta con la nube)
 git checkout -b "nombreRama": crea una rama nueva
 
 git push -u origin "nombre rama" (subimos el codigo de git al repositorio)
+
+--------------------------------------------------------------------
+
+virtualenv
