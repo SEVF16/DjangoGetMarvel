@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'getMarvel'
 ]
 
 MIDDLEWARE = [
@@ -74,10 +75,29 @@ WSGI_APPLICATION = 'proyectoMarvel.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+
+        'ENGINE' : 'django.db.backends.oracle',
+
+        'NAME' : '127.0.0.1:1521/xe',
+
+        'USER' : 'c##getmarvel ',
+
+        'PASSWORD' : 'marvel',
+
+        'TEST' : {
+
+            'USER' : 'default_test',
+
+            'TBLSPACE' : 'defaults_test_tbls',
+
+            'TBLSPACE_TEMP' : 'default_test_tbls_tmp',
+
+        },
+
+    },
+
 }
 
 
