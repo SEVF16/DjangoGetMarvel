@@ -1,0 +1,25 @@
+git version (Version git)
+
+RELACIONAR ARCHIVOS UNA VEZ POR REPOSITORIO
+
+git init (inicia el proceso de repositorio)
+
+git add . 'enviar archivo a seguimiento'
+
+git commit -m "texto" 'guardar modificaciones'
+
+git log --oneline (ver las version anterior)
+
+git  reset --hard+id (retroce a la version )
+
+git remote add origin + "url" (conecta con la nube)
+
+git checkout -b "nombreRama": crea una rama nueva
+
+git push -u origin "nombre rama" (subimos el codigo de git al repositorio)
+
+--------------------------------------------------------------------
+
+virtualenv
+
+env/Scripts/activate
