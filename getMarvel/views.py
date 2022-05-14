@@ -5,6 +5,7 @@ import requests
 import hashlib
 import json 
 from pprint import pprint
+from models import personaje
 # Create your views here.
 private = 'f9320751574fc57064cbbd2ce85e7da0e8d35e1a' 
 ts= '1'
@@ -18,8 +19,16 @@ characters = requests.get(f"http://gateway.marvel.com/v1/public/characters?ts={t
 #					'hash':hash}).json()
 if characters.status_code == 200: 
     response_json = json.loads(characters.text)
-for i in response_json["data"]["results"]:
-	pprint (i)
+    for i in response_json["data"]["results"]:
+        pj = personaje(
+            id = i['id']
+            nombre = i['name']
+            descripcion = i['description']
+            imagen = i['thumbnail']['path']
+            extension = i['thumbnail']['extension']
+        )
+
+        pj.save()
 #pprint(infP)
 #for i in infP:
 #	pprint(infP)
