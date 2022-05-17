@@ -1,8 +1,8 @@
 from pprint import pprint
 from unittest import result
 from urllib import response
+import requests
 from django.shortcuts import render
-import requests 
 import hashlib
 import json 
 from pprint import pprint

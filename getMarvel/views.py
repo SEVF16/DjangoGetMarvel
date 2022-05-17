@@ -1,15 +1,18 @@
-import imp
-from unittest import result
+
 from urllib import response
+import requests
 from django.shortcuts import render
-import requests 
+from getMarvel.models import personaje
 from pprint import pprint
 import service
+
+
 #from .models import personaje
 # Create your views here.
 
   
 pj = service.get(requests)
+characters = "'!?"
 for i in pj:
     id = i['id'], 
     nombre =i['name'],
@@ -17,15 +20,18 @@ for i in pj:
     imagen = i['thumbnail']['path'],
     extension =  i['thumbnail']['extension']
     
-    '''pj = personaje(
+    imagen = ''.join( x for x in imagen if x not in characters)
+    
+    
+    pj = personaje(
         id = id,
         nombre = nombre,
         descripcion = descripcion,
         imagen = imagen,
         extension = extension
-    )'''
-
-    pprint (i)
+    )
+    
+    pj.save()
 
     
 '''
