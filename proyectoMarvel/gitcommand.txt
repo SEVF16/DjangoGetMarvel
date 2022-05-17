@@ -18,6 +18,9 @@ git checkout -b "nombreRama": crea una rama nueva
 
 git push -u origin "nombre rama" (subimos el codigo de git al repositorio)
 
+git pull: Actualiza mi rama local al estado de la rama
+del repositorio
+
 --------------------------------------------------------------------
 
 virtualenv
